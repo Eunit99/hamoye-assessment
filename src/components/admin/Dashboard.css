@@ -1,0 +1,166 @@
+@import "https://cdn.jsdelivr.net/jquery.selectric/1.10.1/selectric.css";
+@import "https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css";
+body {
+	background-color: #1b2431;
+	color: #202020;
+	font-family: "Montserrat", "Helvetica", "Open Sans", "Arial";
+	font-size: 13px;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+p, figure {
+	margin: 0;
+	padding: 0;
+}
+
+.navbar {
+	background-color: #1b2431;
+}
+
+.sidebar {
+	background-color: #1b2431;
+	box-shadow: none;
+}
+
+.sidebar .nav-link {
+	border-left: 5px solid transparent;
+	color: #738297;
+	padding: 0.5rem 0.75rem;
+}
+
+.sidebar .nav-link:hover {
+	color: white;
+}
+
+.sidebar .nav-link.active {
+	border-left: 5px solid #738297;
+	color: white;
+}
+
+.sidebar .zmdi {
+	display: inline-block;
+	font-size: 1.35rem;
+	margin-right: 5px;
+	min-width: 25px;
+}
+
+.projects {
+	background-color: #273142;
+	border: 1px solid #313d4f;
+	overflow-x: auto;
+	width: 100%;
+}
+
+.projects-inner {
+	border-radius: 4px;
+}
+
+.projects-header {
+	color: white;
+	padding: 22px;
+}
+
+.projects-header .count, .projects-header .title {
+	display: inline-block;
+}
+
+.projects-header .count {
+	color: #738297;
+}
+
+.projects-header .zmdi {
+	cursor: pointer;
+	float: right;
+	font-size: 16px;
+	margin: 5px 0;
+}
+
+.projects-header .title {
+	font-size: 21px;
+}
+
+.projects-header .title+.count {
+	margin-left: 5px;
+}
+
+.selectric {
+	background-color: transparent;
+	border-color: #313d4f;
+	border-radius: 4px;
+}
+
+.selectric .label {
+	color: #738297;
+	line-height: 34px;
+	margin-right: 10px;
+	text-align: left;
+}
+
+.selectric-wrapper {
+	float: right;
+	width: 150px;
+}
+
+.chart {
+	border-radius: 3px;
+	border: 1px solid #313d4f;
+	color: white;
+	padding: 10px;
+	position: relative;
+	text-align: center;
+}
+
+.chart canvas {
+	height: 400px;
+	margin: 20px 0;
+	width: 100%;
+}
+
+.chart .actions {
+	margin: 15px;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.chart .actions span {
+	cursor: pointer;
+	display: inline-block;
+	font-size: 20px;
+	margin: 5px;
+	padding: 4px;
+}
+
+.chart .actions .btn-link {
+	color: white;
+}
+
+.chart .actions .btn-link i {
+	font-size: 1.75rem;
+}
+
+.chart .title {
+	font-size: 18px;
+	margin: 0;
+	padding: 15px 0 5px;
+}
+
+.chart .title+.tagline {
+	margin-top: 10px;
+}
+
+.chart .tagline {
+	font-size: 12px;
+}
+
+.danger-item {
+	border-left: 4px solid #a84d43;
+}
+
+.zmdi {
+	line-height: 1;
+	vertical-align: middle;
+}.sign-out {cursor: pointer}

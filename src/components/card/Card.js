@@ -10,12 +10,13 @@ function Card(props) {
 	const timeStamp = currentTime.getTime() / 1000;
 
 	useEffect(() => {
-		// const fetchURL = " http://localhost:8888/flight";
-		const fetchURL = `https://opensky-network.org/api/flights/all?begin=${timeStamp}&end=${timeStamp}`;
+		// const fetchURL = "http://localhost:8888/flight";
+		// const fetchURL = `https://opensky-network.org/api/flights/all?begin=${timeStamp}&end=${timeStamp}`;
+		const fetchURL = "https://opensky-network.org/api/flights/all?begin=1517227200&end=1517230800";
 
-		console.log(fetchURL);
+		// console.log(fetchURL);
 
-		
+
 		fetch(fetchURL).then((res) => {
 			if (!res.ok) {
 				console.error("Error while trying to fetch");
@@ -32,7 +33,7 @@ function Card(props) {
 				console.error(err);
 			}
 		});
-	}, []);
+	}, [timeStamp]);
 
 	useEffect(() => {
 		setCurrentTime(currentTime);

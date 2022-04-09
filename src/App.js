@@ -1,14 +1,31 @@
+import {
+	BrowserRouter,
+	Routes,
+	Route,
+} from "react-router-dom";
 import './App.css';
-import Card from '../src/components/card/Card';
+import SignIn from './components/auth/SignIn';
+import Dashboard from './components/admin/Dashboard';
+import useAuth from './components/hooks/useAuth';
 
 function App() {
+
+	const isAuthenticated = useAuth("", "");
+
 	return (
 		<>
-			<div className="container mt-5">
-				<div className="row mt-5">
-					<Card />
-				</div>
-			</div>
+			<BrowserRouter>
+				<Routes>
+					<Route exact path='/' element={<SignIn
+						isAuthenticated={isAuthenticated} />} />
+
+					<Route exact path='/signin' element={<SignIn
+						isAuthenticated={isAuthenticated} />} />
+
+					<Route exact path='/dashboard' element={<Dashboard
+						isAuthenticated={isAuthenticated} />} />
+				</Routes>
+			</BrowserRouter>
 		</>
 	);
 }
