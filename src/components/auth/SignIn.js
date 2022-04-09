@@ -74,6 +74,7 @@ function SignIn() {
 							placeholder="Username"
 							value={username}
 							onChange={(e) => setUsername(e.target.value)}
+							required
 						/>
 
 						<input
@@ -84,6 +85,7 @@ function SignIn() {
 							placeholder="Password"
 							value={password}
 							onChange={(e) => setPassword(e.target.value)}
+							required
 						/>
 
 						<input

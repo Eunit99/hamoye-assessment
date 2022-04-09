@@ -6,7 +6,7 @@ import { allAirportData } from '../../data/data';
 function Card(props) {
 
 	const [currentTime, setCurrentTime] = useState(new Date());
-	const [fetchData, setFetchData] = useState("");
+	const [fetchData, setFetchData] = useState(allAirportData);
 	const timeStamp = currentTime.getTime() / 1000;
 
 	useEffect(() => {
@@ -25,7 +25,7 @@ function Card(props) {
 			try {
 				res.json()
 					.then((data) => {
-						console.log(data);
+						// console.log(data);
 						setFetchData(data);
 					});
 			}
@@ -40,11 +40,10 @@ function Card(props) {
 	}, [currentTime]);
 
 
-
 	return (
 		<>
 			{
-				allAirportData.map((card, index) => (
+				fetchData.map((card, index) => (
 					<div className="col col-12 col-md-3" key={index}>
 						<div className="card">
 							<div className="card-body">
